@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #FF6347; /* Shrimp Orange */
+    --secondary-color: #FFC0CB; /* Shrimp Pink */
+    --accent-color: #FFD700; /* Shrimp Gold */
+    --font-family: 'Arial', sans-serif;
+    --font-color: #333; /* Dark Gray text */
+    --font-size: 16px;
+    --background-image: url('qwe.jpg'); /* Replace with your image URL */
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--font-color);
+    font-size: var(--font-size);
+}
+
+header {
+    background-color: var(--accent-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 2px;
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.sensor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sensor {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+    width: 300px;
+}
+
+.sensor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.sensor h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.sensor p {
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+}
