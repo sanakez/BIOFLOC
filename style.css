@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #FF6347; /* Shrimp Orange */
-    --secondary-color: #FFC0CB; /* Shrimp Pink */
-    --accent-color: #FFD700; /* Shrimp Gold */
-    --font-family: 'Arial', sans-serif;
-    --font-color: #333; /* Dark Gray text */
-    --font-size: 16px;
-    --background-image: url('qwe.jpg'); /* Replace with your image URL */
+    --primary-color: #0077cc; /* Deep Sea Blue */
+    --secondary-color: #0099cc; /* Ocean Blue */
+    --accent-color: #ccffff; /* Light Sky Blue */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sea-themed font */
+    --font-color: #fff; /* White text */
+    --font-size: 26px;
+    --background-image: url('qwe.jpg'); /* Replace with your sea-themed image URL */
 }
 
 body {
@@ -14,14 +14,17 @@ body {
     padding: 0;
     background-image: var(--background-image);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     color: var(--font-color);
     font-size: var(--font-size);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     text-align: center;
     padding: 20px 0;
 }
@@ -30,11 +33,12 @@ h1 {
     margin: 0;
     font-family: 'Arial Black', sans-serif;
     letter-spacing: 2px;
-    font-size: 36px;
-    color: var(--primary-color);
+    font-size: 30px;
+    color: var(--accent-color);
 }
 
 main {
+    flex: 1;
     padding: 20px;
     text-align: center;
 }
@@ -43,18 +47,18 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .sensor {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 10px;
-    width: 300px;
+    margin: 8px;
+    width: 600px;
 }
 
 .sensor:hover {
@@ -64,19 +68,20 @@ main {
 
 .sensor h2 {
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 34px;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 
 .sensor p {
-    font-size: 18px;
-    color: var(--secondary-color);
+    font-size: 34px;
+    color: var(--accent-color);
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: var(--accent-color);
-    color: var(--font-color);
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    margin-top: auto;
 }
