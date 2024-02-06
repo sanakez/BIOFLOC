@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const socket = io(); // Initialize WebSocket connection
+
   const displaySensorData = (data) => {
     const sensorContainer = document.getElementById('sensorContainer');
     sensorContainer.innerHTML = '';
@@ -16,22 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const updateSensorDataPeriodically = () => {
-    const simulatedSensorData = {
-      Turbidity: getRandomValue(5, 6).toFixed(1) + " NTU",
-      pH: getRandomValue(7.5, 8).toFixed(1),
-      Temperature: getRandomValue(25, 26).toFixed(1) + "°C",
-    };
-
-    // Display the simulated data on the website
-    displaySensorData(simulatedSensorData);
-  };
-
-  const getRandomValue = (min, max) => {
-    return Math.random() * (max - min) + min;
-  };
-
-  updateSensorDataPeriodically();
-
-  setInterval(updateSensorDataPeriodically, 2000);
+  // Listen for sensor data from the WebSocket server
+  socket.on('sensorData', (data) => {
+    displaySensorData(data);
+  });
 });
