@@ -1,28 +1,28 @@
+/* Set custom CSS variables for colors and font */
 :root {
     --primary-color: #0077cc; /* Deep Sea Blue */
     --secondary-color: #0099cc; /* Ocean Blue */
     --accent-color: #ccffff; /* Light Sky Blue */
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sea-themed font */
     --font-color: #fff; /* White text */
-    --font-size: 24px;
-    --background-image: url('qwe.jpg'); /* Replace with your sea-themed image URL */
+    --font-size: 18px; /* Font size for body text */
+    --background-image: url('qwe.jpg'); /* Background image URL */
 }
 
+/* Body styles */
 body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
     background-image: var(--background-image);
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
     color: var(--font-color);
     font-size: var(--font-size);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
+/* Header styles */
 header {
     background-color: var(--primary-color);
     text-align: center;
@@ -33,55 +33,20 @@ h1 {
     margin: 0;
     font-family: 'Arial Black', sans-serif;
     letter-spacing: 2px;
-    font-size: 36px;
+    font-size: 30px;
     color: var(--accent-color);
 }
 
+/* Main styles */
 main {
-    flex: 1;
     padding: 20px;
     text-align: center;
 }
 
-.sensor-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-.sensor {
-    background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px;
-    max-width: 400px;
-}
-
-.sensor:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.sensor h2 {
-    margin-top: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    color: var(--accent-color);
-}
-
-.sensor p {
-    font-size: 24px;
-    color: var(--accent-color);
-}
-
+/* Footer styles */
 footer {
     text-align: center;
     padding: 10px;
     background-color: var(--primary-color);
     color: var(--accent-color);
-    margin-top: auto;
 }
