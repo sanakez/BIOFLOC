@@ -4,7 +4,7 @@
     --accent-color: #ccffff; /* Light Sky Blue */
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sea-themed font */
     --font-color: #fff; /* White text */
-    --font-size: 26px;
+    --font-size: 24px;
     --background-image: url('qwe.jpg'); /* Replace with your sea-themed image URL */
 }
 
@@ -33,7 +33,7 @@ h1 {
     margin: 0;
     font-family: 'Arial Black', sans-serif;
     letter-spacing: 2px;
-    font-size: 30px;
+    font-size: 36px;
     color: var(--accent-color);
 }
 
@@ -57,8 +57,8 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 8px;
-    width: 600px;
+    margin: 20px;
+    max-width: 400px;
 }
 
 .sensor:hover {
@@ -68,13 +68,13 @@ main {
 
 .sensor h2 {
     margin-top: 10px;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: bold;
     color: var(--accent-color);
 }
 
 .sensor p {
-    font-size: 34px;
+    font-size: 24px;
     color: var(--accent-color);
 }
 
@@ -84,14 +84,4 @@ footer {
     background-color: var(--primary-color);
     color: var(--accent-color);
     margin-top: auto;
-}
-
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    .sensor {
-        width: 100%;
-    }
 }
