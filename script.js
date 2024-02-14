@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const socket = new WebSocket('ws://192.168.4.1/ws'); // Replace with your ESP32 IP address
+  const socket = io(); // Initialize WebSocket connection
 
+  // Log WebSocket connection status
+  socket.on('connect', () => {
+    console.log('Connected to WebSocket server');
+  });
+
+  socket.on('disconnect', () => {
+    console.log('Disconnected from WebSocket server');
+  });
+
+  socket.on('error', (error) => {
+    console.error('WebSocket error:', error);
+  });
+
+  // Function to display sensor data on the webpage
   const displaySensorData = (data) => {
     const sensorContainer = document.getElementById('sensorContainer');
     sensorContainer.innerHTML = '';
@@ -18,9 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Listen for sensor data from the WebSocket server
-  socket.onmessage = (event) => {
-    const data = JSON.parse(event.data);
+  // Listen for sensor data from the WebSocket server and display it
+  socket.on('sensorData', (data) => {
     displaySensorData(data);
-  };
+  });
 });
