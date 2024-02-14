@@ -4,7 +4,7 @@
     --secondary-color: #0099cc; /* Ocean Blue */
     --accent-color: #ccffff; /* Light Sky Blue */
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sea-themed font */
-    --font-color: #fff; /* White text */
+    --font-color: #333; /* Dark gray text */
     --font-size: 18px; /* Font size for body text */
     --background-image: url('qwe.jpg'); /* Background image URL */
 }
@@ -20,6 +20,9 @@ body {
     background-repeat: no-repeat;
     color: var(--font-color);
     font-size: var(--font-size);
+    min-height: 100vh; /* Ensure footer is at the bottom */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header styles */
@@ -41,6 +44,36 @@ h1 {
 main {
     padding: 20px;
     text-align: center;
+    flex-grow: 1; /* Grow to fill remaining space */
+}
+
+/* Sensor container styles */
+.sensor-container {
+    background-color: var(--secondary-color); /* Ocean Blue */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; /* Center the container */
+}
+
+.sensor {
+    background-color: var(--accent-color); /* Light Sky Blue */
+    border: 1px solid var(--primary-color); /* Deep Sea Blue */
+    border-radius: 5px;
+    margin: 10px auto; /* Center the sensor */
+    padding: 10px;
+    width: 200px;
+}
+
+.sensor h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: var(--primary-color); /* Deep Sea Blue */
+}
+
+.sensor p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: var(--font-color); /* Dark gray */
 }
 
 /* Footer styles */
